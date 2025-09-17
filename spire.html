@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hackspire Extreme Bug Bounty Program</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f4f4f4; }
+    h1 { color: #b30000; }
+    .critical { color: red; font-weight: bold; }
+    .high { color: orange; font-weight: bold; }
+    .medium { color: blue; font-weight: bold; }
+    .low { color: green; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <h1>Hackspire Extreme Bug Bounty Program</h1>
+  <p>This program invites security researchers to test our advanced infrastructure. Rewards are based on severity.</p>
+
+  <h2>Scope</h2>
+  <ul>
+    <li>https://openrouter.ai/ (Main web application)</li>
+    <li>https://api.openrouter.ai (API endpoints)</li>
+    <li>Internal microservices: *.service.openrouter.ai</li>
+    <li>Edge infrastructure & CDN integrations</li>
+  </ul>
+
+  <h2>Reward Grid</h2>
+  <table>
+    <tr><th>Severity</th><th>Reward</th></tr>
+    <tr><td class="critical">Critical</td><td>€5,000</td></tr>
+    <tr><td class="high">High</td><td>€2,000</td></tr>
+    <tr><td class="medium">Medium</td><td>€500</td></tr>
+    <tr><td class="low">Low</td><td>€200</td></tr>
+  </table>
+
+  <h2>Qualifying Vulnerabilities</h2>
+  <ul>
+    <li>Supply Chain Attacks (package poisoning, dependency confusion)</li>
+    <li>Advanced RCE (via template engines, deserialization bugs)</li>
+    <li>Authentication & MFA bypasses</li>
+    <li>Privilege escalation across tenants</li>
+    <li>SSRF → Cloud metadata access</li>
+    <li>Prototype pollution in APIs</li>
+    <li>Business Logic Exploits at scale</li>
+    <li>Zero-day style bypasses of WAF / AI filters</li>
+  </ul>
+
+  <h2>Rules</h2>
+  <ul>
+    <li>No DoS or destructive testing</li>
+    <li>No attacks on 3rd party systems</li>
+    <li>Submit detailed PoC with reproduction steps</li>
+    <li>Rewards only for first valid reporter</li>
+  </ul>
+
+</body>
+</html>
